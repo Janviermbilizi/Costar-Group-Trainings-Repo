@@ -9,17 +9,17 @@ namespace API.Controllers
     [Route("api/[Controller]")]
     public class UsersController : ControllerBase
     {
-        private readonly DatabaseContext context;
+        private readonly DatabaseContext _context;
         public UsersController(DatabaseContext context)
         {
-            this.context = context;
+            _context = context;
         }
 
         //Get all users
         [HttpGet]
         public async Task<ActionResult<IEnumerable<User>>> GetUsers()
         {
-            var users = await context.Users.ToListAsync();
+            var users = await _context.Users.ToListAsync();
 
             return users;
         }
@@ -28,7 +28,7 @@ namespace API.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<User>> GetUser(int id)
         {
-            var user = await context.Users.FindAsync(id);
+            var user = await _context.Users.FindAsync(id);
             
             return user;
         }
