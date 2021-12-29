@@ -62,3 +62,5 @@ C:\Users\jmbilizi\desktop\Costar-Group-Trainings-Repo\DotnetCoreProject\API\bin\
 C:\Users\jmbilizi\desktop\Costar-Group-Trainings-Repo\DotnetCoreProject\API\bin\Debug\net6.0\runtimes\win-x86\native\sni.dll
 C:\Users\jmbilizi\desktop\Costar-Group-Trainings-Repo\DotnetCoreProject\API\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\jmbilizi\desktop\Costar-Group-Trainings-Repo\DotnetCoreProject\API\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\jmbilizi\desktop\Costar-Group-Trainings-Repo\DotnetCoreProject\API\bin\Debug\net6.0\Humanizer.dll
+C:\Users\jmbilizi\desktop\Costar-Group-Trainings-Repo\DotnetCoreProject\API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
