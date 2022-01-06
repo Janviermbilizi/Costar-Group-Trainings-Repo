@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">SutwApp</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item" *ngIf="loggedIn">
+            <a class="nav-link" aria-current="page" href="#">Feeds</a>
+          </li>
+          <li class="nav-item" *ngIf="loggedIn">
+            <a class="nav-link" href="#">Dashboard</a>
+          </li>
+          <li class="nav-item" *ngIf="loggedIn">
+            <a class="nav-link">Messages</a>
+          </li>
+        </ul>
+
+        <form #loginForm="ngForm" class="d-flex" (ngSubmit)="login(); loginForm.resetForm()" autocomplete="on" *ngIf="!loggedIn" >
+          <input name="email" [(ngModel)]="model.email" class="form-control me-2" type="email" placeholder="Email">
+          <input name="password" [(ngModel)]="model.password" class="form-control me-2" type="password" placeholder="Password">
+          <button class="btn btn-outline-success" type="submit">Login</button>
+        </form>
+        <div class="dropdown" *ngIf="loggedIn">
+          <a class=" dropdown-toggle link-secondary px-3 m-0" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" style="text-decoration: none;">{{user.currentUser}}</a>
+          <ul class="dropdown-menu mt-4" aria-labelledby="dropdownMenuButton1">
+            <li class="dropdown-item">View Profile</li>
+            <li class="dropdown-item">Edit Prifile</li>
+            <li class="dropdown-item">Dashboard</li>
+          </ul>
+        </div>
+        <button class="btn btn-outline-success" *ngIf="loggedIn" (click)="logout()">Logout</button>
+      </div>
+    </div>
+  </nav>
+                                       
