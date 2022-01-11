@@ -6,26 +6,29 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav me-auto mb-md-0">
-          <li class="nav-item" *ngIf="loggedIn">
-            <a class="nav-link" aria-current="page" href="#">Feeds</a>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#" *ngIf="accountService.currentUser$ | async">Feeds</a>
           </li>
-          <li class="nav-item" *ngIf="loggedIn">
-            <a class="nav-link" href="#">Dashboard</a>
+          <li class="nav-item">
+            <a class="nav-link" href="#" *ngIf="accountService.currentUser$ | async">Teams</a>
           </li>
-          <li class="nav-item" *ngIf="loggedIn">
-            <a class="nav-link" href="#">Messages</a>
+          <li class="nav-item">
+            <a class="nav-link" href="#" *ngIf="accountService.currentUser$ | async">Competitions</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" *ngIf="accountService.currentUser$ | async">Messages</a>
           </li>
         </ul>
 
-        <form #loginForm="ngForm" class="d-flex" (ngSubmit)="login(); loginForm.resetForm()" autocomplete="on" *ngIf="!loggedIn" >
+        <form #loginForm="ngForm" class="d-flex" (ngSubmit)="login(); loginForm.resetForm()" autocomplete="on" *ngIf="!(accountService.currentUser$ | async)">
           <input name="email" [(ngModel)]="model.email" class="form-control me-2" type="email" placeholder="Email">
           <input name="password" [(ngModel)]="model.password" class="form-control me-2" type="password" placeholder="Password">
           <button class="btn btn-outline-success" type="submit">Login</button>
         </form>
-        <ul class="navbar-nav mb-2 mb-md-0" *ngIf="loggedIn">
+        <ul class="navbar-nav mb-2 mb-md-0" *ngIf="accountService.currentUser$ | async">
           <li class="nav-item">
             <div class="dropdown">
-              <a class="dropdown-toggle nav-link link-secondary m-0" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" style="text-decoration: none;">{{user.currentUser}}</a>
+              <a class="dropdown-toggle nav-link link-secondary m-0" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" style="text-decoration: none;">Welcome user</a>
               <ul class="dropdown-menu my-3" aria-labelledby="dropdownMenuButton1">
                 <li class="dropdown-item">View Profile</li>
                 <li class="dropdown-item">Edit Prifile</li>

@@ -1,0 +1,25 @@
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Register } from '../_models/register';
+
+@Component({
+  selector: 'app-register',
+  templateUrl: './register.component.html',
+  styleUrls: ['./register.component.css']
+})
+export class RegisterComponent implements OnInit {
+  @Output() cancelRegister = new EventEmitter();
+  model: any = {};
+  
+  constructor() {}
+
+  ngOnInit(): void {
+  }
+
+  register(){
+    console.log(this.model);
+  }
+
+  cancel(){
+    this.cancelRegister.emit(false);
+  }
+}

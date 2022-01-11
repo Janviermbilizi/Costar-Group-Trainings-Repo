@@ -44,7 +44,7 @@ namespace API.Controllers
 
             return new UserDto
             {
-                CurrentUser = newUser.FullName,
+                Username = newUser.FullName,
                 Token = this.tokenService.CreateToken(newUser)
             };
         }
@@ -74,7 +74,7 @@ namespace API.Controllers
 
             return new UserDto
             {
-                CurrentUser = User.FullName,
+                Username = User.FullName,
                 Token = this.tokenService.CreateToken(User)
             };
         }
