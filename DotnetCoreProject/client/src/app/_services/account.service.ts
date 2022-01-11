@@ -7,7 +7,7 @@ import { User } from '../_models/user';
   providedIn: 'root'
 })
 export class AccountService {
-  baseUrl = "https://localhost:5001/api/";
+  baseUrl = "https://localhost:5001/api/account/";
   //declare an observable
   private currentUserSource = new ReplaySubject<User>(1);
   currentUser$ = this.currentUserSource.asObservable()
@@ -15,15 +15,18 @@ export class AccountService {
   constructor(private http: HttpClient) { }
 
   login(model: any){
-    return this.http.post(this.baseUrl + "account/login", model).pipe(
+    return this.http.post(this.baseUrl + "login", model).pipe(
       map((res: User) => {
-        const user = res;
-        if(user){
-          localStorage.setItem("user", JSON.stringify(user));
-          console.log(user);
-          //set Observable
-          this.currentUserSource.next(user);
-        }
+        this.setUserLocally(res);
+      })
+    )
+  }
+
+  //
+  register(model: any){
+    return this.http.post(this.baseUrl + "register", model).pipe(
+      map((res: User) => {
+        this.setUserLocally(res);
       })
     )
   }
@@ -36,5 +39,13 @@ export class AccountService {
   logout(){
     localStorage.removeItem("user");
     this.currentUserSource.next(null);
+  }
+
+  setUserLocally(userdata: any){
+    if(userdata){
+      localStorage.setItem("user", JSON.stringify(userdata));
+      //set Observable
+      this.currentUserSource.next(userdata);
+    }
   }
 }
