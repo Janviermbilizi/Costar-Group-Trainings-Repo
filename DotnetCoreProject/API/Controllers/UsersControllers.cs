@@ -1,4 +1,5 @@
 using API.Database;
+using API.Interfaces;
 using API.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -8,10 +9,10 @@ namespace API.Controllers
 {
     public class UsersController : BaseApiController
     {
-        private readonly DatabaseContext _context;
-        public UsersController(DatabaseContext context)
+        private readonly IUserRepository userRepository;
+        public UsersController(IUserRepository userRepository)
         {
-            _context = context;
+            this.userRepository = userRepository;
         }
 
         //Get all users
@@ -19,18 +20,16 @@ namespace API.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<User>>> GetUsers()
         {
-            var users = await _context.Users.ToListAsync();
-
-            return users;
+            var users = await this.userRepository.GetUsersAsync();
+            return Ok(users);
         }
 
         //Get user by ID
         [Authorize]
-        [HttpGet("{id}")]
-        public async Task<ActionResult<User>> GetUser(int id)
+        [HttpGet("{MemberId}")]
+        public async Task<ActionResult<User>> GetUser(string memberid)
         {
-            var user = await _context.Users.FindAsync(id);
-            
+            var user = await this.userRepository.GetUserByMemberIdAsync(memberid);
             return user;
         }
     }
