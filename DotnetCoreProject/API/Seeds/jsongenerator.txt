@@ -1,0 +1,26 @@
+
+// Json schema for User auto-creation in json generator
+[
+  '{{repeat(5)}}',
+  {
+    FullName: '{{firstName("female")}}' + ' ' + '{{surname()}}',
+    Email: '{{email()}}',
+    DateOfBirth: '{{date(new Date(1950,0,1), new Date(2004, 2, 10), "YYYY-MM-dd")}}',
+    Gender: '{{gender()}}',
+    Created: '{{date(new Date(2019, 0, 1), new Date (2022,2,10), "YYYY-MM-dd")}}',
+    LastActive: '{{date(new Date(2020, 5, 1), new Date (2022,2,10), "YYYY-MM-dd")}}',
+    Introduction:'{{lorem(1, "paragraphs")}}',
+    Interests: function() { 
+      var activities = ['Soccer', 'Dancing', 'Football', 'Basketball', 'Singing'];
+      return activities[Math.floor(Math.random() * (5 - 1) + 1) - 1];
+    },
+    City: '{{city()}}',
+    Country: '{{country()}}',
+    Photos: [
+      {
+        Url: function(num) { return 'https://randomuser.me/api/portraits/women/' + num.integer(1,99) + '.jpg';},
+        IsMain: true
+      }
+	]
+  }
+]

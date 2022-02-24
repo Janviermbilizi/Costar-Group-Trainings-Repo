@@ -2329,7 +2329,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "\\\\dcappdev217\\NuGet\\DEV": {},
         "https://api.nuget.org/v3/index.json": {},
         "https://artifacts.prd.costargroup.com/artifactory/api/nuget/edsf-nuget-101-local": {}
       },
