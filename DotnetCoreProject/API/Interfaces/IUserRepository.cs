@@ -8,6 +8,6 @@ namespace API.Interfaces
          Task<bool> SaveAllAsync();
          Task<IEnumerable<User>> GetUsersAsync();
          Task<User> GetUserByIdAsync(int id);
-         Task<User> GetUserByPublicId(string publicid);
+         Task<User> GetUserByMemberIdAsync(string MemberId);
     }
 }

@@ -12,6 +12,9 @@ namespace API.Extensions
             //Inject Token Service
             services.AddScoped<ITokenService, TokenService>();
             
+            //inject Repository service
+            services.AddScoped<IUserRepository, UserRepository>();
+
             //Lamda expression to create a db connection or DB injection
             //services.AddDbContext<DatabaseContext>(options => options.UseSqlServer("Connection string that should come from appSettings as well defined below"));
             services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(configuration.GetConnectionString("SqlServerConnectionString")));
