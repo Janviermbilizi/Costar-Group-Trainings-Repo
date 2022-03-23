@@ -1,4 +1,5 @@
 using API.Database;
+using API.Helpers;
 using API.Interfaces;
 using API.Services;
 using Microsoft.EntityFrameworkCore;
@@ -14,6 +15,9 @@ namespace API.Extensions
             
             //inject Repository service
             services.AddScoped<IUserRepository, UserRepository>();
+
+            //inject AutoMapper service
+            services.AddAutoMapper(typeof(AutoMapperProfiles).Assembly);
 
             //Lamda expression to create a db connection or DB injection
             //services.AddDbContext<DatabaseContext>(options => options.UseSqlServer("Connection string that should come from appSettings as well defined below"));

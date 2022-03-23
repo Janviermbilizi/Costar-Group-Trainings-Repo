@@ -1,12 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "1T7Q2lC4pOsk3b+GtWx0hZwS/mXqaJfmiqBFjlS0hfJA9o3/bv0tj8zPyoBrU7cTm3oH7ZeBVydfkQG179++vg==",
+  "dgSpecHash": "tOavMFYrBC1ig6w8zHC8OlkS66gURutG0tDBSD8IyESsTLOOxI6jkKgc1zKS9OdRwy2R49lj8FiVKOaimtn/ZQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\jmbilizi\\desktop\\Costar-Group-Trainings-Repo\\DotnetCoreProject\\API\\API.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\jmbilizi\\.nuget\\packages\\automapper\\11.0.0\\automapper.11.0.0.nupkg.sha512",
+    "C:\\Users\\jmbilizi\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
     "C:\\Users\\jmbilizi\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\jmbilizi\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.1\\microsoft.aspnetcore.authentication.jwtbearer.6.0.1.nupkg.sha512",
-    "C:\\Users\\jmbilizi\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\jmbilizi\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\jmbilizi\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\jmbilizi\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",
     "C:\\Users\\jmbilizi\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.1\\microsoft.entityframeworkcore.6.0.1.nupkg.sha512",

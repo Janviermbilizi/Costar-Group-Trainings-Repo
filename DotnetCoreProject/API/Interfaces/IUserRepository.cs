@@ -1,3 +1,4 @@
+using API.DTOs;
 using API.Models;
 
 namespace API.Interfaces
@@ -8,6 +9,9 @@ namespace API.Interfaces
          Task<bool> SaveAllAsync();
          Task<IEnumerable<User>> GetUsersAsync();
          Task<User> GetUserByIdAsync(int id);
-         Task<User> GetUserByMemberIdAsync(string MemberId);
+         Task<User> GetUserByMemberIdAsync(string memberId);
+        Task GetMemberAsync();
+        Task<MemberDto> GetMemberAsync(string memberId);
+        Task<IEnumerable<MemberDto>> GetMembersAsync();
     }
 }

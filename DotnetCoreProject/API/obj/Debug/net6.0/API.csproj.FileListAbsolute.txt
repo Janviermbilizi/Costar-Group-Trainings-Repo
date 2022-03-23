@@ -66,3 +66,5 @@ C:\Users\jmbilizi\desktop\Costar-Group-Trainings-Repo\DotnetCoreProject\API\bin\
 C:\Users\jmbilizi\desktop\Costar-Group-Trainings-Repo\DotnetCoreProject\API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\jmbilizi\desktop\Costar-Group-Trainings-Repo\DotnetCoreProject\API\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\jmbilizi\desktop\Costar-Group-Trainings-Repo\DotnetCoreProject\API\bin\Debug\net6.0\Seeds\UserSeedData.json
+C:\Users\jmbilizi\desktop\Costar-Group-Trainings-Repo\DotnetCoreProject\API\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\jmbilizi\desktop\Costar-Group-Trainings-Repo\DotnetCoreProject\API\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
