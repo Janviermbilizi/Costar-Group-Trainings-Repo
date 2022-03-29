@@ -1,0 +1,18 @@
+<div class="card mb-4">
+  <div class="card-img-wrapper">
+    <div class="card-body p-1">
+      <img
+        src="{{ member.photos[0].url }}"
+        alt="{{ member.memberId }}"
+        class="card-img-top"
+      />
+      <h6 class="card-title text-center mt-2">
+        <i class="fa fa-user"></i> {{ member.fullName }}
+      </h6>
+      <p class="card-text text-muted text-center mb-0">{{ member.age }}</p>
+      <p class="card-text text-muted text-center">
+        {{ member.city }}
+      </p>
+    </div>
+  </div>
+</div>
