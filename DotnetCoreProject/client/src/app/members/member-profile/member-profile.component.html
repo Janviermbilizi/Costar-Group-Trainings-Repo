@@ -1,1 +1,103 @@
-<h4 *ngIf="member">{{ member.fullName }}</h4>
+<div class="row" *ngIf="member">
+  <div class="col-4">
+    <div class="card">
+      <img
+        src="{{ member.photos[0].url }}"
+        alt="{{ member.memberId }}"
+        class="card-img-top img-thumbnail"
+      />
+      <div class="card-body">
+        <div>
+          <strong>Location:</strong>
+          <p>{{ member.city }}, {{ member.country }}</p>
+        </div>
+        <div>
+          <strong>Age:</strong>
+          <p>{{ member.age }}</p>
+        </div>
+        <div>
+          <strong>Last Active:</strong>
+          <p>{{ member.lastActive }}</p>
+        </div>
+        <div>
+          <strong>Member since:</strong>
+          <p>{{ member.created }}</p>
+        </div>
+      </div>
+      <div class="card-footer">
+        <div class="btn-group d-flex">
+          <button class="btn btn-primary">Like</button>
+          <button class="btn btn-success">Message</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-8">
+    <nav>
+      <div class="nav nav-tabs mb-4" id="nav-tab" role="tablist">
+        <button
+          class="nav-link active"
+          id="nav-about-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#nav-about"
+          type="button"
+          role="tab"
+          aria-controls="nav-about"
+          aria-selected="true"
+        >
+          About
+        </button>
+        <button
+          class="nav-link"
+          id="nav-interests-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#nav-interests"
+          type="button"
+          role="tab"
+          aria-controls="nav-interests"
+          aria-selected="false"
+        >
+          Interests
+        </button>
+        <button
+          class="nav-link"
+          id="nav-photos-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#nav-photos"
+          type="button"
+          role="tab"
+          aria-controls="nav-photos"
+          aria-selected="false"
+        >
+          Photos
+        </button>
+      </div>
+    </nav>
+    <div class="tab-content" id="nav-tabContent">
+      <div
+        class="tab-pane fade show active"
+        id="nav-about"
+        role="tabpanel"
+        aria-labelledby="nav-about-tab"
+      >
+        <p>{{ member.introduction }}</p>
+      </div>
+      <div
+        class="tab-pane fade"
+        id="nav-interests"
+        role="tabpanel"
+        aria-labelledby="nav-interests-tab"
+      >
+        <li>{{ member.interests }}</li>
+      </div>
+      <div
+        class="tab-pane fade"
+        id="nav-photos"
+        role="tabpanel"
+        aria-labelledby="nav-photos-tab"
+      >
+        All my Photos will go here
+      </div>
+    </div>
+  </div>
+</div>
